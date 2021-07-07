@@ -1,0 +1,993 @@
+body {
+  overflow: hidden;
+}
+
+#loding {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  z-index: 99999999999999;
+}
+
+.sk-circle {
+  margin: 300px auto;
+  width: 60px;
+  height: 60px;
+  position: relative;
+}
+
+.sk-circle .sk-child {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.sk-circle .sk-child:before {
+  content: '';
+  display: block;
+  margin: 0 auto;
+  width: 15%;
+  height: 15%;
+  background-color: #fff;
+  border-radius: 100%;
+  -webkit-animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
+  animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
+}
+
+.sk-circle .sk-circle2 {
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+.sk-circle .sk-circle3 {
+  -webkit-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+
+.sk-circle .sk-circle4 {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.sk-circle .sk-circle5 {
+  -webkit-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+  transform: rotate(120deg);
+}
+
+.sk-circle .sk-circle6 {
+  -webkit-transform: rotate(150deg);
+  -ms-transform: rotate(150deg);
+  transform: rotate(150deg);
+}
+
+.sk-circle .sk-circle7 {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.sk-circle .sk-circle8 {
+  -webkit-transform: rotate(210deg);
+  -ms-transform: rotate(210deg);
+  transform: rotate(210deg);
+}
+
+.sk-circle .sk-circle9 {
+  -webkit-transform: rotate(240deg);
+  -ms-transform: rotate(240deg);
+  transform: rotate(240deg);
+}
+
+.sk-circle .sk-circle10 {
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.sk-circle .sk-circle11 {
+  -webkit-transform: rotate(300deg);
+  -ms-transform: rotate(300deg);
+  transform: rotate(300deg);
+}
+
+.sk-circle .sk-circle12 {
+  -webkit-transform: rotate(330deg);
+  -ms-transform: rotate(330deg);
+  transform: rotate(330deg);
+}
+
+.sk-circle .sk-circle2:before {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.sk-circle .sk-circle3:before {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+.sk-circle .sk-circle4:before {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.sk-circle .sk-circle5:before {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+.sk-circle .sk-circle6:before {
+  -webkit-animation-delay: -0.7s;
+  animation-delay: -0.7s;
+}
+
+.sk-circle .sk-circle7:before {
+  -webkit-animation-delay: -0.6s;
+  animation-delay: -0.6s;
+}
+
+.sk-circle .sk-circle8:before {
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+
+.sk-circle .sk-circle9:before {
+  -webkit-animation-delay: -0.4s;
+  animation-delay: -0.4s;
+}
+
+.sk-circle .sk-circle10:before {
+  -webkit-animation-delay: -0.3s;
+  animation-delay: -0.3s;
+}
+
+.sk-circle .sk-circle11:before {
+  -webkit-animation-delay: -0.2s;
+  animation-delay: -0.2s;
+}
+
+.sk-circle .sk-circle12:before {
+  -webkit-animation-delay: -0.1s;
+  animation-delay: -0.1s;
+}
+
+@-webkit-keyframes sk-circleBounceDelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes sk-circleBounceDelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+#btnUp {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+  display: none;
+}
+
+#slideBar {
+  position: fixed;
+  top: 40%;
+  left: 0;
+  z-index: 9999999;
+}
+
+#colorBox {
+  background-color: #a1a0a0;
+  float: left;
+  padding: 15px;
+  display: none;
+}
+
+.color-item {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: inline-block;
+  background-color: orange;
+}
+
+#slideBarToggle {
+  background-color: #333;
+  float: left;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Start nav*/
+
+#main-nav {
+  background-color: transparent;
+  color: white;
+}
+
+.navbar-dark .navbar-brand {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+  padding: 18px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+  text-decoration: underline !important;
+}
+
+/* End nav */
+
+/* Start header */
+
+header {
+  background-image: url(../imge/bg.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+.layer {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+}
+
+.header-content h4 {
+  font-size: 50px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.header-content h1 {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.header-content h1::after {
+  content: "";
+  animation: slider 10s linear infinite;
+}
+
+@keyframes slider {
+  0% {
+    content: "L|";
+  }
+  1% {
+    content: "La|";
+  }
+  2% {
+    content: "lar|";
+  }
+  3% {
+    content: "Larr.|";
+  }
+  4% {
+    content: "Larry|";
+  }
+  5% {
+    content: "Larry |";
+  }
+  6% {
+    content: "Larry D|";
+  }
+  7% {
+    content: "Larry De|";
+  }
+  8% {
+    content: "Larry Deo|";
+  }
+  9% {
+    content: "Larry Deo.|";
+  }
+  10% {
+    content: "Larry Deo|";
+  }
+  11% {
+    content: "Larry De|";
+  }
+  12% {
+    content: "Larry D|";
+  }
+  13% {
+    content: "Larry |";
+  }
+  14% {
+    content: "Larry|";
+  }
+  15% {
+    content: "Larr|";
+  }
+  16% {
+    content: "Lar|";
+  }
+  17% {
+    content: "La|";
+  }
+  18% {
+    content: "L|";
+  }
+  19% {
+    content: "|";
+  }
+  20% {
+    content: "A|";
+  }
+  21% {
+    content: "A |";
+  }
+  22% {
+    content: "A P|";
+  }
+  23% {
+    content: "A Ph|";
+  }
+  25% {
+    content: "A Pho|";
+  }
+  26% {
+    content: "A Phot|";
+  }
+  27% {
+    content: "A Photo|";
+  }
+  28% {
+    content: "A Photog|";
+  }
+  29% {
+    content: "A Photogr|";
+  }
+  30% {
+    content: "A Photogra|";
+  }
+  31% {
+    content: "A Photograp|";
+  }
+  32% {
+    content: "A Photograph|";
+  }
+  33% {
+    content: "A Photographe|";
+  }
+  34% {
+    content: "A Photographer|";
+  }
+  35% {
+    content: "A Photographer.|";
+  }
+  36% {
+    content: "A Photographer|";
+  }
+  37% {
+    content: "A Photographe|";
+  }
+  38% {
+    content: "A Photograph|";
+  }
+  39% {
+    content: "A Photograp|";
+  }
+  40% {
+    content: "A Photogra|";
+  }
+  41% {
+    content: "A Photogr|";
+  }
+  42% {
+    content: "A Photog|";
+  }
+  43% {
+    content: "A Photo|";
+  }
+  44% {
+    content: "A Phot|";
+  }
+  45% {
+    content: "A Pho|";
+  }
+  46% {
+    content: "A Ph|";
+  }
+  47% {
+    content: "A P|";
+  }
+  48% {
+    content: "A |";
+  }
+  49% {
+    content: "A|";
+  }
+  50% {
+    content: "|";
+  }
+  51% {
+    content: "A|";
+  }
+  52% {
+    content: "A |";
+  }
+  53% {
+    content: "A G|";
+  }
+  54% {
+    content: "A Gr|";
+  }
+  55% {
+    content: "A Gra|";
+  }
+  56% {
+    content: "A Grap|";
+  }
+  57% {
+    content: "A Graph|";
+  }
+  58% {
+    content: "A Graphi|";
+  }
+  59% {
+    content: "A Graphic|";
+  }
+  60% {
+    content: "A Graphic |";
+  }
+  61% {
+    content: "A Graphic D|";
+  }
+  62% {
+    content: "A Graphic De|";
+  }
+  63% {
+    content: "A Graphic Des|";
+  }
+  64% {
+    content: "A Graphic Desi|";
+  }
+  65% {
+    content: "A Graphic Desig|";
+  }
+  66% {
+    content: "A Graphic Design|";
+  }
+  67% {
+    content: "A Graphic Designe|";
+  }
+  68% {
+    content: "A Graphic Designer|";
+  }
+  69% {
+    content: "A Graphic Designer.|";
+  }
+  70% {
+    content: "A Graphic Designer|";
+  }
+  71% {
+    content: "A Graphic Designe|";
+  }
+  72% {
+    content: "A Graphic Design|";
+  }
+  73% {
+    content: "A Graphic Desig|";
+  }
+  74% {
+    content: "A Graphic Desi|";
+  }
+  75% {
+    content: "A Graphic Des|";
+  }
+  76% {
+    content: "A Graphic De|";
+  }
+  77% {
+    content: "A Graphic D|";
+  }
+  78% {
+    content: "A Graphic |";
+  }
+  79% {
+    content: "A Graphic|";
+  }
+  80% {
+    content: "A Graphi|";
+  }
+  81% {
+    content: "A Graph|";
+  }
+  82% {
+    content: "A Grap|";
+  }
+  83% {
+    content: "A Gra|";
+  }
+  84% {
+    content: "A Gr|";
+  }
+  85% {
+    content: "A G|";
+  }
+  86% {
+    content: "A |";
+  }
+  87% {
+    content: "A|";
+  }
+  88% {
+    content: "|";
+  }
+  89% {
+    content: "";
+  }
+  90% {
+    content: "";
+  }
+  91% {
+    content: "";
+  }
+  92% {
+    content: "";
+  }
+  93% {
+    content: "";
+  }
+  94% {
+    content: "";
+  }
+  95% {
+    content: "";
+  }
+  96% {
+    content: "";
+  }
+  97% {
+    content: "";
+  }
+  98% {
+    content: "";
+  }
+  99% {
+    content: "";
+  }
+  100% {
+    content: "";
+  }
+}
+
+header .icons .icon {
+  font-size: 14px;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+/* End  header  */
+
+/* Start  About  */
+
+.about-contant {
+  font-family: 'Poppins', sans-serif;
+}
+
+.about-contant h2 {
+  font-weight: 800;
+}
+
+.about-contant p .span {
+  color: #999;
+}
+
+.about-contant p {
+  line-height: 1.6;
+  margin: 0;
+  font-size: 15px;
+  color: #748182;
+}
+
+.about-contant .item {
+  margin-top: 30px;
+}
+
+.about-contant .progress {
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  position: relative;
+}
+
+.about-contant .progress h3 {
+  font-size: 13px;
+  color: #ffffff;
+  position: relative;
+  z-index: 2;
+}
+
+.about-contant .progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #1c1c1c;
+  text-align: right;
+  padding-right: 15px;
+}
+
+.about-contant .btn {
+  margin-top: 30px;
+  font-size: 14px;
+  padding: 10px 30px !important;
+  transition: all 0.5s;
+}
+
+.about-contant .btn1 {
+  background-color: black;
+  color: white;
+}
+
+.about-contant .btn2 {
+  background-color: white;
+  color: black;
+  border: 1px solid black !important;
+}
+
+.about-contant .btn1:hover {
+  background-color: white !important;
+  color: black !important;
+  border: 1px solid black !important;
+}
+
+.about-contant .btn2:hover {
+  background-color: black !important;
+  color: white !important;
+  border: 1px solid black !important;
+}
+
+/* End  About  */
+
+/* Start   services  */
+
+.services {
+  background-color: #f7f7f7;
+}
+
+.services h3 {
+  font-weight: 900;
+  font-size: 40px;
+}
+
+.services-item {
+  background-color: #ffffff;
+  box-shadow: 0px 10px 30px -8px rgb(0 0 0 / 10%);
+}
+
+.services-item .icon {
+  width: 70px;
+  height: 70px;
+  font-size: 30px;
+  background-color: #f4f4f4;
+  border-radius: 50%;
+  margin-bottom: 30px;
+  padding: 10px;
+  transition: background-color 1s, color 1s;
+}
+
+.services-item h4 {
+  font-size: 18px;
+  font-weight: 800;
+  padding: 10px;
+}
+
+.services p {
+  padding: 5px;
+  line-height: 1.6;
+  color: #777;
+}
+
+.services-item:hover .icon {
+  background-color: black;
+  color: white;
+}
+
+/* End   services  */
+
+/* Start   portfolio  */
+
+.portfolio h3 {
+  font-weight: 900;
+  font-size: 40px;
+}
+
+.portfolio .nav-pills .nav-link.active {
+  background-color: transparent;
+  color: #333;
+  border-bottom: 2px solid black;
+  border-radius: 0;
+}
+
+.w-30 {
+  width: 30% !important;
+}
+
+.portfolio-head ul {
+  margin-bottom: 30px !important;
+}
+
+.portfolio-head ul li a {
+  border: none;
+  background-color: transparent;
+  color: black;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.portofolio-info {
+  overflow: hidden;
+}
+
+.portofolio-caption {
+  width: 96%;
+  height: 96%;
+  bottom: -2%;
+  left: 2%;
+  opacity: 0;
+  background-color: #ffffff;
+  transition: all 0.5s;
+}
+
+.portofolio-info:hover .portofolio-caption {
+  bottom: 2%;
+  opacity: 1;
+}
+
+.portofolio-caption h4 {
+  position: relative;
+  top: -13px;
+  transition: top 0.5s;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.portofolio-info:hover .portofolio-caption h4 {
+  top: 0px;
+}
+
+.portofolio-caption .icon {
+  position: relative;
+  top: 20px;
+  transition: all 0.5s;
+}
+
+.portofolio-caption .icon i {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 28px;
+  border-radius: 50%;
+  border: 1px solid #111;
+  background: #111;
+  color: #eee;
+  transition: all 0.5s;
+}
+
+.portofolio-caption i:hover {
+  background: transparent;
+  color: #000;
+}
+
+.portofolio-info:hover .portofolio-caption .icon {
+  top: 0;
+  background: transparent;
+  color: #000;
+}
+
+/* End   portfolio  */
+
+/* Start   testmonils  */
+
+.testmonils-head h3 {
+  font-weight: 900;
+  font-size: 40px;
+}
+
+.client img {
+  width: 15% !important;
+}
+
+#Clients {
+  background-color: #f7f7f7 !important;
+}
+
+.client p {
+  line-height: 1.6;
+  margin: 0;
+  font-size: 15px;
+  color: #748182;
+}
+
+.client h6 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 30px 0 5px;
+  color: #666;
+}
+
+.client span {
+  font-size: 12px;
+  font-weight: 600;
+  color: #888;
+  margin-bottom: 30px;
+}
+
+.carousel-indicators li {
+  background-color: rgb(66, 65, 65);
+  width: 13px;
+  height: 13px;
+  margin: 10px 7px;
+  border-radius: 50%;
+}
+
+.iconss .icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.iconss h3 {
+  font-weight: 900;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.iconss p {
+  font-size: 15px;
+  color: #748182;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+/* End   testmonils  */
+
+/* Start   Blogs  */
+
+#Blogs {
+  background-color: #f7f7f7;
+}
+
+#Blogs h3 {
+  font-weight: 900;
+  font-size: 40px;
+}
+
+#Blogs .blog-img img {
+  transition: all 0.5s;
+}
+
+#Blogs .blog-img:hover img {
+  transform: scale(1.1);
+}
+
+#Blogs h5 {
+  font-size: 16px;
+  color: #999;
+}
+
+#Blogs p {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#Blogs span {
+  color: #555;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#Blogs .card .brdr {
+  width: 25%;
+  height: 2px;
+  background-color: black;
+}
+
+/* End   Blogs  */
+
+/* Start   Contane  */
+
+.Contane-head h3 {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.item-contact .icon {
+  font-size: 25px;
+  margin-bottom: 15px;
+  width: 60px;
+  height: 60px;
+  background: #f4f4f4;
+  border-radius: 50%;
+  transition: all .5s;
+}
+
+.item-contact .icon:hover {
+  background-color: black;
+  color: white;
+}
+
+.item-contact p {
+  line-height: 1.6;
+  margin: 0;
+  font-size: 15px;
+  color: #748182
+}
+
+.item-contact h6 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.contact-form .form-control {
+  background-color: #f4f4f4;
+ 
+}
+
+
+.contact-form .textarea {
+  background-color: #f4f4f4;
+ 
+}
+
+.contact-form .btn {
+  color: white;
+  background-color: black;
+  font-size: 16px;
+  border: 1px solid black;
+  transition: all 0.6s;
+  padding: 10px 40px;
+  margin: 10px 15px;
+}
+
+.contact-form .btn:hover {
+  color: black !important;
+  background-color: white !important;
+  border: 1px solid black;
+}
+
+/* End   Contane  */
+
+/* Start   footer  */
+
+footer {
+  background-color: #1c1c1c;
+}
+
+.footer-caption p {
+  color: #748182;
+}
+
+/* End   footer  */
